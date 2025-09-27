@@ -18,10 +18,10 @@ const About: React.FC = () => {
               About Me
             </h2>
             <p className="text-lg text-gray-300 mb-4">
-              Hi, I'm Vaidehi Verma, a passionate designer and developer with a love for creating beautiful, intuitive, and highly functional user experiences. I thrive at the intersection of design and technology, transforming complex problems into elegant solutions.
+              I’m Vaidehi Verma, an Engineer specializing in Artificial Intelligence and Machine Learning. I enjoy solving complex problems with clarity and precision, combining strong analytical skills with creativity.
             </p>
             <p className="text-lg text-gray-300">
-              With a background in both creative arts and computer science, I bring a unique perspective to every project. When I'm not coding or designing, you can find me exploring new coffee shops, hiking, or getting lost in a good book.
+             My expertise spans Java problem-solving, MERN stack development, data cleaning, and Power BI, with a focus on building reliable and scalable solutions. I believe engineering is not just about writing code — it’s about creating innovative, dependable systems that inspire confidence and push ideas into reality.
             </p>
           </div>
         </div>
