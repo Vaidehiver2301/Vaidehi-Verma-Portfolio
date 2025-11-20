@@ -1,28 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 
 interface BackgroundProps {
-    isMobile: boolean; // New prop for mobile detection
 }
 
-const Background: React.FC<BackgroundProps> = ({ isMobile }) => {
+const Background: React.FC<BackgroundProps> = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mousePosition = useRef({ x: -1000, y: -1000 }); // Start off-screen
 
   useEffect(() => {
-    // If on mobile, stop any existing animation and do not set up new ones
-    // The parent div's background color will serve as the static background.
-    if (isMobile) {
-        const canvas = canvasRef.current;
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas if it was rendered
-        }
-        return; // Exit early, no animation for mobile
-    }
-
-    // --- Desktop animation logic starts here ---
     const canvas = canvasRef.current;
-    // Check if canvas exists, it might not be rendered on mobile
     if (!canvas) return;
     
     const ctx = canvas.getContext('2d');
@@ -110,12 +96,11 @@ const Background: React.FC<BackgroundProps> = ({ isMobile }) => {
       window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isMobile]); // Dependency on isMobile to re-run effect on mobile state change
+  }, []); // No dependencies, runs once on mount
 
   return (
     <div className="fixed top-0 left-0 w-full h-full z-0 bg-[#111111]">
-        {/* Only render canvas element on non-mobile devices */}
-        {!isMobile && <canvas ref={canvasRef} className="w-full h-full block opacity-80" />}
+        <canvas ref={canvasRef} className="w-full h-full block opacity-80" />
     </div>
   );
 };

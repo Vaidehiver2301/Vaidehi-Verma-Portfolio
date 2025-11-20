@@ -16,10 +16,9 @@ interface Particle {
 }
 
 interface HeroProps {
-    isMobile: boolean; // New prop for mobile detection
 }
 
-const Hero: React.FC<HeroProps> = ({ isMobile }) => {
+const Hero: React.FC<HeroProps> = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -34,20 +33,8 @@ const Hero: React.FC<HeroProps> = ({ isMobile }) => {
 
   // Particle animation effect
   useEffect(() => {
-    // If on mobile, stop any existing animation and do not set up new ones
-    if (isMobile) {
-        const canvas = canvasRef.current;
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas if it was rendered
-        }
-        return; // Exit early, no animation for mobile
-    }
-
-    // --- Desktop animation logic starts here ---
     const canvas = canvasRef.current;
     const container = containerRef.current;
-    // Check if canvas and container exist, they might not be rendered on mobile
     if (!canvas || !container) return;
 
     const ctx = canvas.getContext('2d');
@@ -139,7 +126,7 @@ const Hero: React.FC<HeroProps> = ({ isMobile }) => {
         container.removeEventListener('mousemove', handleMouseMove);
         container.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [isMobile]); // Dependency on isMobile to re-run effect on mobile state change
+  }, []); // No dependencies, runs once on mount
 
   useEffect(() => {
     // Cleanup interval on component unmount
@@ -226,8 +213,7 @@ const Hero: React.FC<HeroProps> = ({ isMobile }) => {
 
   return (
     <div ref={containerRef} className="relative w-full min-h-screen text-center flex flex-col items-center justify-center p-4">
-      {/* Only render canvas element on non-mobile devices */}
-      {!isMobile && <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" />}
+      <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" />
       <h1 
         className="relative text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-300 tracking-tight font-mono"
         onMouseOver={handleMouseOver}
