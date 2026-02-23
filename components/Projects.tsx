@@ -29,14 +29,14 @@ const projectsData = [
     ],
   },
   {
-    title: "SimonSays",
-    description: "a memory game which puts the player's memory to a test",
-    longDescription: "Simon Says is a memory game which puts the player's memory to a test. This simple game flashes the given buttons in a random sequence and the player has to remember the squence and click the buttons in the same order to build a score.",
-    tags: [ "HTML", "CSS", "Javascript"],
-    liveUrl: "https://memorygamesimonsays.netlify.app/",
-    repoUrl: "https://github.com/Vaidehiver2301/SimonSays",
+    title: "Student Database Application",
+    description: "a console-based Java program designed to simulate a basic student management.",
+    longDescription: "The Student Database Application is a console-based Java program designed to simulate a basic student enrollment and fee management system.",
+    tags: [ "Java"],
+    liveUrl: "https://github.com/Vaidehiver2301/StudentDatabaseApp/blob/main/StudentDatabaseApp.java",
+    repoUrl: "https://github.com/Vaidehiver2301/StudentDatabaseApp",
     images: [
-      "https://res.cloudinary.com/dggajdbuf/image/upload/v1757513398/Screenshot_2025-09-10_192856_mk0wit.png"
+      "https://res.cloudinary.com/dggajdbuf/image/upload/v1771866440/Screenshot_2026-02-23_223533_a2wbcs.png"
     ],
   },
 ];
