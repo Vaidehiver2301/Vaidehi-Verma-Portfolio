@@ -39,6 +39,17 @@ const projectsData = [
       "https://res.cloudinary.com/dggajdbuf/image/upload/v1771866440/Screenshot_2026-02-23_223533_a2wbcs.png"
     ],
   },
+  {
+    title: "Commitly-AI",
+    description: "a productivity-focused web application",
+    longDescription: "Commitly is a productivity-focused web application designed to help users track goals, manage tasks, and build consistent habits through structured commitments.",
+    tags: [ "React", "Node.js", "Flask API"],
+    liveUrl: "https://commitly-ai.netlify.app/",
+    repoUrl: "https://github.com/Vaidehiver2301/Commitly",
+    images: [
+      "https://res.cloudinary.com/dggajdbuf/image/upload/v1771940575/Screenshot_2026-02-24_191211_q3dlx9.png"
+    ],
+  }
 ];
 
 export interface Project {
