@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
           
           <div className="mb-12">
             <a
-                href="https://res.cloudinary.com/dggajdbuf/image/upload/ResumeVaidehi_eoaxec.pdf"
+                href="https://res.cloudinary.com/dggajdbuf/image/upload/v1781530568/Resume_1_jf3gyh.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-3 border-2 border-[#F5F5F5] rounded-lg text-lg bg-[#F5F5F5] text-[#111111] hover:bg-transparent hover:text-[#F5F5F5] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111111] focus:ring-white"
