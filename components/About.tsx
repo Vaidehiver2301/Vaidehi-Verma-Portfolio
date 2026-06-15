@@ -7,7 +7,7 @@ const About: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
           {/* Professional Photo */}
           <img
-            src="https://res.cloudinary.com/dggajdbuf/image/upload/v1757513619/vaidehiIMG_shkkyh.jpg"
+            src="https://res.cloudinary.com/dggajdbuf/image/upload/v1781536635/Vaidehi_jjcxl7.jpg"
             alt="Vaidehi Verma"
             className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 flex-shrink-0 rounded-full object-cover border-4 border-gray-700"
           />
